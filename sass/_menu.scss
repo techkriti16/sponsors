@@ -8,6 +8,10 @@
 	background-color:$themeColor;
 	color:#fff;
 	box-shadow:rgba(0, 0, 0, 0.178431) 0px 4px 8px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1500;
 	.left{
 		height: $h;
 		@include display(flex);

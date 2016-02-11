@@ -40,28 +40,28 @@ var cat=[
 			{title:'Presented By Sponsor, Closing Night<br>Title Sponsor, Rule the Sky<br>Title Sponsor, Sky Sparks',src:'AIRBUS_Group_Flat_RGB.png'},
 			{title:'Title Sponsor, Software Corner',src:'Samsung-Logo-PNG-blue-small.png'},
 			{title:'Title Sponsor, Software Corner',src:'Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg'},
-			{src:'altair-logo.jpg'},
+			{title:'Events Partner',src:'altair-logo.jpg'},
 			{src:'ASCE_Section_India_signature.jpg'},
 			{src:'askme-logo.png'},
 			{title:'Major Events Partner',src:'Campus France.jpg'},
 			{title:'Title Sponsor, IHPC',src:'cdac.png'},
-			{src:'DHL.png'},
+			{title:'Logistics Partner',src:'DHL.png'},
 			{title:'Co Title Sponsor, Software Corner',src:'Indeed_Logo_Untitled.png'},
-			{src:'2.jpg'},
-			{src:'Mahindra Rise.jpg'},
-			{src:'mytaxiindia.jpg'},
-			{src:'10959279_10203721436857024_58091321_n.jpg'},
+			{title:'Title Sponsor, Bridge Design Challenge',src:'2.jpg'},
+			{title:'Events Partner', src:'Mahindra Rise.jpg'},
+			{title:'Powered By, 29 States',src:'mytaxiindia.jpg'},
+			{title:'Education Partners', src:'10959279_10203721436857024_58091321_n.jpg'},
 			{title:'Powered By Software Corner',src:'SAP_grad_C_pref.png'},
-			{title:'Title Sponsor(Internet of Things)',src:'Winjitlogo_White.psd.png'},
+			{title:'Associate Title IOT',src:'Winjitlogo_White.psd.png'},
 			{title:'Prizes Partner, Business events',src:'icici.jpg'},
-			{src:'union bank.jpg'}
+			{src:'union bank.jpg',display:false}
 			
 		]
 	},
 	{
 		title:'Other Sponsor',
 		spos:[
-		{src:'zebronics1.png'}
+			{title:'Music Accessories Partner',src:'zebronics1.png'}
 		]
 	},
 ];
@@ -79,6 +79,9 @@ var updateSpo=function(){
 		main.append(heading);
 		heading.append($('<span>'));
 		for(var i=0;i<spos.length;i++){
+			if(spos[i].display==false){
+				continue;
+			}
 			var n=$('<div>');
 			n.addClass('list-item');
 			var img=$('<img>');
